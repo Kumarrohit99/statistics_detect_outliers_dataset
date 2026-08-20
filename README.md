@@ -4,10 +4,22 @@ This repository contains datasets and example code for detecting outliers in sta
 
 ## Contents
 - data/ — (expected) directory for datasets (CSV/Excel files)
-- notebooks/ — (optional) example Jupyter notebooks demonstrating analysis and detection
+- notebooks/ — Jupyter notebooks demonstrating analysis and detection
+  - notebooks/detect_outliers(statistics).ipynb — example notebook showing IQR and Z-score methods
 - src/ — (optional) scripts for preprocessing and models
 
 > If these directories or files are missing, please add your datasets and code in the appropriate folders.
+
+## Included notebook
+A new notebook has been added at `notebooks/detect_outliers(statistics).ipynb`. It demonstrates:
+
+- Loading a small example dataset
+- Sorting and inspecting the data
+- Detecting outliers using the Interquartile Range (IQR) method
+- Detecting outliers using the Z-score (standard deviation) method
+- Visualizing the data with a boxplot (seaborn)
+
+The notebook identifies the outliers [102, 107, 108] for the example dataset.
 
 ## Getting started
 1. Clone the repository:
@@ -21,7 +33,15 @@ This repository contains datasets and example code for detecting outliers in sta
    .venv\Scripts\activate     # Windows (PowerShell)
    pip install -r requirements.txt
 
-3. Explore the data in the `data/` folder and run example notebooks in `notebooks/`.
+   If you don't have a requirements.txt, the notebook requires at least:
+
+   pip install numpy matplotlib seaborn
+
+3. Open the notebook:
+
+   jupyter notebook notebooks/detect_outliers(statistics).ipynb
+
+4. Run the cells to reproduce the outlier detection steps and the boxplot visualization.
 
 ## Example approaches
 - Z-score method
